@@ -40,6 +40,53 @@ INFOBIP_FROM_NUMBER=38515507799
 INFOBIP_VOICE_TEXT=Violence detected. Please check immediately.
 ```
 
+## Install uv
+
+Official docs:
+- https://docs.astral.sh/uv/getting-started/installation/
+
+Official download/install page:
+- https://astral.sh/uv
+
+macOS and Linux:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Check that `uv` is installed:
+
+```bash
+uv --version
+```
+
+## Setup With uv
+
+Install dependencies and create the virtual environment from the project root:
+
+```bash
+uv sync
+```
+
+If you want to activate the environment manually:
+
+```bash
+source .venv/bin/activate
+```
+
+You can also run scripts without manual activation:
+
+```bash
+uv run python run_yolo_monitor.py
+uv run python run_vit_monitor.py
+```
+
 ## Run
 
 From the project root:
